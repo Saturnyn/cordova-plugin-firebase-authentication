@@ -1,3 +1,8 @@
+FORK:
+attempt to add signInWithApple
+
+
+
 # cordova-plugin-firebase-authentication<br>[![NPM version][npm-version]][npm-url] [![NPM downloads][npm-downloads]][npm-url]
 > Cordova plugin for [Firebase Authentication](https://firebase.google.com/docs/auth/)
 
