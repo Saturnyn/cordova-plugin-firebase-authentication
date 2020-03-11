@@ -85,5 +85,10 @@ module.exports = {
         return function() {
             exec(null, null, PLUGIN_NAME, "setAuthStateChanged", [true]);
         };
+    },
+    signInWithApple: function() {
+        return new Promise(function(resolve, reject) {
+            exec(resolve, reject, PLUGIN_NAME, "signInWithApple", []);
+        });
     }
 };

@@ -1,6 +1,7 @@
 #import <Cordova/CDV.h>
+@import AuthenticationServices;
 
-@interface FirebaseAuthenticationPlugin : CDVPlugin
+@interface FirebaseAuthenticationPlugin : CDVPlugin<ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding>
 
 - (void)getCurrentUser:(CDVInvokedUrlCommand*)command;
 - (void)getIdToken:(CDVInvokedUrlCommand*)command;
@@ -17,5 +18,7 @@
 - (void)signOut:(CDVInvokedUrlCommand*)command;
 - (void)setLanguageCode:(CDVInvokedUrlCommand*)command;
 - (void)setAuthStateChanged:(CDVInvokedUrlCommand*)command;
+
+- (void)signInWithApple:(CDVInvokedUrlCommand*)command;
 
 @end
