@@ -329,6 +329,8 @@ if (@available(iOS 13.0, *)) {
 - (void)authorizationController:(ASAuthorizationController *)controller
 		   didCompleteWithError:(NSError *)error API_AVAILABLE(ios(13.0)) {
 	NSLog(@"Sign in with Apple errored: %@", error);
+	CDVPluginResult *pluginResult = [self createAuthResult:nil withError:error];
+	[self.commandDelegate sendPluginResult:pluginResult callbackId: self->signInWithAppleCommand.callbackId];
 }
 
 - (NSString *)stringBySha256HashingString:(NSString *)input {
